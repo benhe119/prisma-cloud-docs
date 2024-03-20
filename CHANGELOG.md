@@ -1,3 +1,17 @@
+## [1.0.65](https://github.com/hlxsites/prisma-cloud-docs/compare/v1.0.64...v1.0.65) (2024-03-18)
+
+
+### Bug Fixes
+
+* jp content-collection ([06b520c](https://github.com/hlxsites/prisma-cloud-docs/commit/06b520c2cbc345cc267ec64c28c5a7c152dfbb1c))
+
+## [1.0.64](https://github.com/hlxsites/prisma-cloud-docs/compare/v1.0.63...v1.0.64) (2024-03-07)
+
+
+### Bug Fixes
+
+* custom section ids ([93d5dba](https://github.com/hlxsites/prisma-cloud-docs/commit/93d5dba4fddaaf54cab510cfa89ff367050b5e2b))
+
 ## [1.0.63](https://github.com/hlxsites/prisma-cloud-docs/compare/v1.0.62...v1.0.63) (2023-12-11)
 
 

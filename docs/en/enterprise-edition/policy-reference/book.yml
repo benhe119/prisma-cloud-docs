@@ -1429,113 +1429,29 @@ dir: build-integrity-policies
 topics:
 - name: Build Integrity Policies
   file: build-integrity-policies.adoc
-- name: Bitbucket Policies
-  dir: bitbucket-policies
   topics:
-  - name: Bitbucket Policies
-    file: bitbucket-policies.adoc
-  - name: BitBucket pull requests require less than approvals
-    file: merge-requests-should-require-at-least-2-approvals-1.adoc
-- name: Github Actions Policies
-  dir: github-actions-policies
-  topics:
-  - name: Github Actions Policies
-    file: github-actions-policies.adoc
-  - name: GitHub Actions ACTIONS_ALLOW_UNSECURE_COMMANDS environment variable is set to true
-    file: ensure-actions-allow-unsecure-commands-isnt-true-on-environment-variables.adoc
-  - name: GitHub Actions Run commands are vulnerable to shell injection
-    file: ensure-run-commands-are-not-vulnerable-to-shell-injection.adoc
-  - name: GitHub Actions artifact build do not have SBOM attestation in pipeline
-    file: found-artifact-build-without-evidence-of-cosign-sbom-attestation-in-pipeline.adoc
-  - name: GitHub Actions artifact build do not have cosign - sign execution in pipeline
-    file: no-evidence-of-signing.adoc
-  - name: GitHub Actions curl is being with secrets
-    file: suspicious-use-of-curl-with-secrets.adoc
-  - name: GitHub Actions Netcat is being used with IP address
-    file: suspicious-use-of-netcat-with-ip-address.adoc
-  - name: GitHub Actions contain workflow_dispatch inputs parameters
-    file: github-actions-contain-workflow-dispatch-input-parameters.adoc
-- name: Github Policies
+- name: GitHub Policies
   dir: github-policies
   topics:
-  - name: Github Policies
+  - name: GitHub Policies
     file: github-policies.adoc
   - name: GitHub repository defined in Terraform is not Private
     file: ensure-repository-is-private.adoc
-  - name: GitHub repository webhook defined in Terraform does not use a secure SSL
-    file: github-2.adoc
-  - name: GitHub pull request configurations defined in Terraform have less than 2 approvals
-    file: github-5.adoc
-  - name: GitHub repository defined in Terraform does not have GPG signatures for all commits
-    file: github-6.adoc
-  - name: GitHub repository has less than 2 admins
-    file: ensure-2-admins-are-set-for-each-repository.adoc
-  - name: GitHub branch protection rules are not enforced on administrators
-    file: ensure-branch-protection-rules-are-enforced-on-administrators.adoc
   - name: GitHub Actions Environment Secrets are not encrypted
     file: ensure-github-actions-secrets-are-encrypted.adoc
-  - name: GitHub branch protection does not dismiss stale reviews
-    file: ensure-github-branch-protection-dismisses-stale-review-on-new-commit.adoc
-  - name: GitHub branch protection does not require code owner reviews
-    file: ensure-github-branch-protection-requires-codeowner-reviews.adoc
-  - name: GitHub branch protection does not require status checks
-    file: ensure-github-branch-protection-requires-conversation-resolution.adoc
-  - name: GitHub branch protection does not require push restrictions
-    file: ensure-github-branch-protection-requires-push-restrictions.adoc
-  - name: GitHub branch protection does not require status checks
-    file: ensure-github-branch-protection-requires-status-checks.adoc
-  - name: GitHub branch protection does not restrict who can dismiss a PR
-    file: ensure-github-branch-protection-restricts-who-can-dismiss-pr-reviews-cis-115.adoc
-  - name: GitHub branch protection rules allow branch deletions
-    file: ensure-github-branch-protection-rules-does-not-allow-deletions.adoc
-  - name: GitHub branch protection rules do not require linear history
-    file: ensure-github-branch-protection-rules-requires-linear-history.adoc
-  - name: GitHub merge requests should require at least 2 approvals
-    file: ensure-github-branch-protection-rules-requires-signed-commits.adoc
-  - name: GitHub repository webhooks do not use HTTPs
-    file: ensure-github-organization-and-repository-webhooks-are-using-https.adoc
-  - name: GitHub organization security settings do not have IP allow list enabled
-    file: ensure-github-organization-security-settings-has-ip-allow-list-enabled.adoc
-  - name: GitHub organization security settings do not include 2FA capability
-    file: ensure-github-organization-security-settings-require-2fa.adoc
-  - name: GitHub organization security settings do not include SSO
-    file: ensure-github-organization-security-settings-require-sso.adoc
-  - name: GitHub organization webhooks do not use HTTPs
-    file: ensure-github-organization-webhooks-are-using-https.adoc
   - name: GitHub Repository doesn't have vulnerability alerts enabled
     file: ensure-github-repository-has-vulnerability-alerts-enabled.adoc
-  - name: GitHub merge requests should require at least 2 approvals
-    file: merge-requests-should-require-at-least-2-approvals.adoc
-  - name: GitHub pull request configurations defined in Terraform have less than 2 approvals
-    file: github-5.adoc
-  - name: GitHub repository defined in Terraform does not have GPG signatures for all commits
-    file: github-6.adoc
-- name: Gitlab CI Policies
-  dir: gitlab-ci-policies
-  topics:
-  - name: Gitlab CI Policies
-    file: gitlab-ci-policies.adoc
-  - name: Rules used could create a double pipeline
-    file: avoid-creating-rules-that-generate-double-pipelines.adoc
-  - name: Suspicious use of curl in a GitLab CI environment
-    file: suspicious-use-of-curl-with-ci-environment-variables-in-script.adoc
-- name: Gitlab Policies
+- name: GitLab Policies
   dir: gitlab-policies
   topics:
-  - name: Gitlab Policies
+  - name: GitLab Policies
     file: gitlab-policies.adoc
-  - name: Gitlab organization has groups with no two factor authentication configured
-    file: ensure-all-gitlab-groups-require-two-factor-authentication.adoc
-  - name: Gitlab branch protection rules allows force pushes
-    file: ensure-gitlab-branch-protection-rules-does-not-allow-force-pushes.adoc
-  - name: Gitlab project commits are not signed
+  - name: Gitlab project defined in Terraform does not require signed commits
     file: ensure-gitlab-commits-are-signed.adoc
-  - name: Gitlab project does not prevent secrets
+  - name: Gitlab project defined in Terraform does not prevent secrets
     file: ensure-gitlab-prevent-secrets-is-enabled.adoc
-  - name: Gitlab project merge has less than 2 approvals
+  - name: Gitlab project defined in Terraform requires fewer than 2 approvals
     file: merge-requests-do-not-require-two-or-more-approvals-to-merge.adoc
-  - name: Gitlab branch protection rules defined in Terraform allow force push
-    file: gitlab-2.adoc
 ---
 kind: chapter
 name: Docker Policies
@@ -2469,11 +2385,11 @@ topics:
   - name: Azure Repos CI/CD Risks Policies
     file: azure-repo-cicd-pipeline-policies.adoc
   - name: Deprecated package used in NPM project of an Azure Repos repository
-    file: azure-repo-cicd-pipeline-policies.adoc
+    file: azure-repo-deprecated-package-in-npm.adoc
   - name: Possible Python typosquatting detected in an Azure Repos repository
     file: azure-repo-python-typosquat-detected.adoc
   - name: Potential dependency confusion in an Azure Repos repository due to package name or scope available in registry
-    file: azure-repo-cicd-pipeline-policies.adoc
+    file: azure-repo-dependency-confusion.adoc
   - name: Secret exposed in proxy URL within `.npmrc` file of an Azure Repos repository
     file: azure-repos-secret-proxy-url-npmrcfile.adoc
   - name: Secret exposed in registry URL within `.npmrc` file of an Azure Repos repository
@@ -2490,8 +2406,12 @@ topics:
     file: azure-repos-pipelines-transmit-data-unencrypted-channel.adoc 
   - name: Missing integrity check for downloaded executable in Azure Pipelines pipeline
     file: azure-repo-missing-integrity-check-download-exe.adoc
-  - name: Missing integrity check for downloaded executable in Azure Pipelines pipeline
+  - name: Missing ‘.npmrc’ file in Azure Repos repository
     file: azure-repo-missing-npmrc-file.adoc
+  - name: NPM package downloaded from git without commit hash reference in an Azure Repos repository
+    file: azure-repo-npm-download-no-commit-hash-ref.adoc
+  - name: Repository in Azure Repos does not dismiss pull request approvals on the default branch when new commits are pushed
+    file: azure-repo-not-dismiss-pr-approval-db.adoc
   - name: Packages insecurely installed through “npm install” command in Azure Pipelines pipeline
     file: azure-repos-pckg-insecure-npm-install.adoc
   - name: Secrets found in logs of an Azure Pipelines pipeline
@@ -2516,6 +2436,8 @@ topics:
     file: azure-repo-npm-package-lockfile-weak-hash.adoc
   - name: Environment variables exposed when printed to log in Azure Pipelines
     file: azure-repos-env-var-exposed-printlog.adoc
+  - name: NPM project contains unused dependencies in an Azure Repos repository
+    file: azure-repo-npm-project-unused-dependencies.adoc
   - name: Project Service hooks sent over unencrypted channel
     file: azure-repo-project-service-hook-sent-unencrypted.adoc
   - name: Project service hook SSL verification is disabled
@@ -2557,6 +2479,8 @@ topics:
     file: bb-missing-npmrc-file.adoc
   - name: Pull request reviews in BitBucket not required before merging code to default branch
     file: bb-pr-review-merge-notrequired.adoc
+  - name: NPM package downloaded from git without commit hash reference in a Bitbucket repository
+    file: bb-npm-download-no-commit-hash-ref.adoc
   - name: Unencrypted channel used by ‘.npmrc’ file of a Bitbucket repository to download dependencies from proxy
     file: bb-unencrypted-channel-download-dependencies-proxy.adoc
   - name: Unencrypted channel used by ‘.npmrc’ file of a Bitbucket repository to download dependencies from registry
@@ -2569,6 +2493,8 @@ topics:
     file: bb-repo-webhook-ssl-verif-disabled.adoc
   - name: BitBucket webhooks sent over unencrypted channel
     file: bb-webhooks-sent-unencrypted-channel.adoc
+  - name: NPM project contains unused dependencies in an Azure Repos repository
+    file: bb-repo-npm-project-unused-dependencies.adoc
   - name: NPM package lock file verifies integrity with weak hash algorithm (BitBucket)
     file: bb-npm-package-lockfile-weak-hash.adoc
   - name: Unrotated BitBucket access keys
@@ -2679,6 +2605,8 @@ topics:
     file: ghactions-miss-integrity-check-download-exe.adoc
   - name: Missing ‘.npmrc’ file in GitHub repository
     file: gh-missing-npmrc-file.adoc
+  - name: NPM package downloaded from git without commit hash reference in a GitHub repository
+    file: gh-repo-npm-download-no-commit-hash-ref.adoc 
   - name: Packages insecurely installed through “npm install” command in GitHub Actions pipeline
     file: ghactions-packages-insecurely-installed-npminstall.adoc
   - name: Private repository forks can lead to code leakage in GitHub
@@ -2727,11 +2655,13 @@ topics:
     file: gh-merge-outdated-code-allowed.adoc
   - name: NPM package lock file verifies integrity with weak hash algorithm (GitHub)
     file: gh-npm-package-lockfile-weak-hash.adoc
+  - name: NPM project contains unused dependencies in a GitHub repository
+    file: gh-repo-npm-project-unused-dependencies.adocgh-missing-npmrc-file.adoc
   - name: Permissive GitHUb organization base permissions
     file: perm-gh-org-baseperm.adoc
   - name: Push restrictions not enforced on the default branch in GitHub
     file: gh-push-restrictions-not-enforced.adoc
-  - name: GitHub organization’s identity not confirmed with a verified badge
+  - name: GitHub organization's identity not confirmed with a verified badge
     file: gh-org-identity-notverified-badge.adoc
   - name: Unrotated GitHub deploy keys
     file: gh-unrotated-dep-key.adoc
@@ -2784,6 +2714,8 @@ topics:
     file: gl-ci-miss-integrity-check-download-exe.adoc
   - name: Missing `.npmrc` file in GitLab repository
     file: gl-missing-npmrc-file.adoc
+  - name: NPM package downloaded from git without commit hash reference in a GitLab repository
+    file: gl-repo-npm-download-no-commit-hash-ref.adoc
   - name: Packages insecurely installed through npm install command in GitLab CI pipeline
     file: glpipeline-packages-insecurely-installed-npminstall.adoc
   - name: Secrets found in logs of a GitLab CI pipeline
@@ -2810,6 +2742,8 @@ topics:
     file: gl-webhooks-sent-unencrypted-channel.adoc
   - name: NPM package lock file verifies integrity with weak hash algorithm (Gitlab)
     file: gl-npm-package-lockfile-weak-hash.adoc
+  - name: NPM project contains unused dependencies in a GitLab repository
+    file: gl-repo-npm-project-unused-dependencies.adoc
   - name: Throttling is not enabled in GitLab
     file: gl-throttle-disabled.adoc
   - name: Unrotated GitLab deploy keys
